@@ -1,10 +1,13 @@
-FROM mysql:8.0
+# Use the official MySQL image from Docker Hub
+FROM mysql:latest
 
-ENV MYSQL_ROOT_PASSWORD my_password
+# Set the MySQL root password (change 'your_password' to a secure password)
+ENV MYSQL_ROOT_PASSWORD=your_password
 
-RUN set -eux; \
-    apt-get update; \
-    apt-get install -y --no-install-recommends mysql-server; \
-    mysql -u root -pmy_password <<< "CREATE DATABASE my_database";
+# Create a database and user (change 'your_db', 'your_user', and 'your_password' to your desired values)
+ENV MYSQL_DATABASE=your_db
+ENV MYSQL_USER=your_user
+ENV MYSQL_PASSWORD=your_password
 
+# Expose the MySQL port (optional)
 EXPOSE 3306
