@@ -7,16 +7,16 @@
 
 # Execution of Docker-Compose
 1. Clone fahadkamran2001 Repository
-   git clone https://github.com/FahadKamran2001/CA4.git && cd CA4
+git clone https://github.com/FahadKamran2001/CA4.git && cd CA4
 2. Create Network
-   docker network create flaskSqlNetwork
+docker network create flaskSqlNetwork
 3. Build Containers
-   docker-compose build
+docker-compose build
 4. Run Containers
-   docker-compose up -d
+docker-compose up -d
 5. Run Flask on LocalHost
-   go to http://localhost:5000/
+go to http://localhost:5000/
 6. Stop Docker-Compose (to stop containers)
-   docker-compose down
+docker-compose down
 7. Stop Network
-   docker network rm flaskSqlNetwork
+docker network rm flaskSqlNetwork
