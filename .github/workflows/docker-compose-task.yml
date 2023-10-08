@@ -20,9 +20,6 @@ jobs:
         
       - name: Docker Login
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-
-      - name: Set Working Directory
-        run: cd /home/runner/work/CA4/app
         
       - name: Build Docker Containers
         run: docker-compose build
