@@ -9,7 +9,7 @@ CREATE TABLE "Activity Participants" (
 INSERT INTO "Activity Participants" (Participant, name, id, password)
 VALUES
     ('Task1 ', 'Fahad Kamran', 'i200983', 'password1'),
-    ('Task2', 'Atif Muneer', 'i190600', 'password2'),
+    ('Task2', 'Atif Munir', 'i190600', 'password2'),
     ('Task3', 'Ahmad Munir', 'i200977', 'password3');
 
 COMMIT;
