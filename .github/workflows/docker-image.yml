@@ -26,12 +26,3 @@ jobs:
       run: |
         docker login -u fahadkamran2001 -p ${{ secrets.DOCKER_PASSWORD }}
         docker push fahadkamran2001/ca4-db:latest
-
-    - name: Start Docker Compose
-      run: docker-compose up -d
-
-    - name: Install Python Requirements
-      run: make install-requirements
-
-    - name: Run Node.js Server
-      run: make run-server
