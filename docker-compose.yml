@@ -2,6 +2,7 @@ version: "3"
 services:
   app:
     build: .
+    image: fahadkamran2001/ca4-server:latest
     links:
       - db
     ports:
