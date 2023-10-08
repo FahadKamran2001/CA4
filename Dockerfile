@@ -1,13 +1,17 @@
-# Use the official MySQL image from Docker Hub
-FROM mysql:latest
+# Use Python as the base image
+FROM python:3.8-slim
 
-# Set the MySQL root password (change 'your_password' to a secure password)
-ENV MYSQL_ROOT_PASSWORD=your_password
+# Set up the working directory within the container
+WORKDIR /app
 
-# Create a database and user (change 'your_db', 'your_user', and 'your_password' to your desired values)
-ENV MYSQL_DATABASE=your_db
-ENV MYSQL_USER=your_user
-ENV MYSQL_PASSWORD=your_password
+# Copy the contents of the current directory to the container
+COPY . /app
 
-# Expose the MySQL port (optional)
-EXPOSE 3306
+# Install the necessary dependencies
+RUN pip install -r requirements.txt
+
+# Expose the port on which the Flask application will run
+EXPOSE 5000
+
+# Run the Flask application
+CMD ["python", "app.py"]
