@@ -16,7 +16,7 @@ jobs:
         run: git clone https://github.com/FahadKamran2001/CA4.git && cd CA4
           
       - name: Docker Network Creation
-        run: docker network create app-db-network
+        run: docker network create flaskSqlNetwork
         
       - name: Docker Login
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
