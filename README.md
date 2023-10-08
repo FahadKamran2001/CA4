@@ -2,8 +2,8 @@
 
 # Members
 1. Fahad Kamran (i200983) | Member 1 : Docker Compose and Workflows and basic file setup of requirements.txt and readme.md
-2. Ahmad Munir (i200977)  | Member 2 : Link for Server image : https://hub.docker.com/repository/docker/fahadkamran2001/ca4-server/general
-3. Atif Munir (i190600)   | Member 3 : Link for Database image : https://hub.docker.com/repository/docker/fahadkamran2001/ca4-db/general
+2. Atif Munir (i190600)  | Member 2 : Link for Server image : https://hub.docker.com/repository/docker/fahadkamran2001/ca4-server/general
+3. Atif Munir (i200977)   | Member 3 : Link for Database image : https://hub.docker.com/repository/docker/fahadkamran2001/ca4-db/general
 
 # Execution of Docker-Compose
 1. Clone fahadkamran2001 Repository
