@@ -6,8 +6,8 @@ services:
     ports:
       - "32000:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: root
+      MYSQL_ROOT_PASSWORD: tiger123
+      MYSQL_DATABASE: users
     volumes:
       - ./db:/docker-entrypoint-initdb.d/
   app:
@@ -17,7 +17,7 @@ services:
       - db
     ports:
       - "5000:5000"
-    environment: mysql://root:root@db:3300/root
+    environment: mysql://root:tiger123@db:3300/users
     depends_on:
       - db
 networks:
