@@ -15,4 +15,4 @@ run-server:
 	$(DOCKER_COMPOSE) exec $(APP_CONTAINER) node server.js
 
 install-requirements:
-	$(DOCKER_COMPOSE) exec $(APP_CONTAINER) pip install -r requirements.txt
+	$(DOCKER_COMPOSE) exec $(APP_CONTAINER) pip install -r requirement.txt
