@@ -13,13 +13,16 @@ jobs:
         uses: actions/checkout@v2
           
       - name: Clone CA4 Repository
-        run: git clone https://github.com/FahadKamran2001/CA4.git
+        run: git clone https://github.com/FahadKamran2001/CA4.git && cd CA4
           
       - name: Docker Network Creation
         run: docker network create app-db-network
         
       - name: Docker Login
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Set Working Directory
+        run: cd /home/runner/work/CA4/app
         
       - name: Build Docker Containers
         run: docker-compose build
