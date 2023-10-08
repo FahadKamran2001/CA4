@@ -19,10 +19,13 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Build Docker Image
+    - name: Build Docker Image for DB
       run: docker build . --file Dockerfile --tag fahadkamran2001/ca4-db:latest
+    - name: Build Docker Image for Server
+      run: docker build . --file Dockerfile --tag fahadkamran2001/ca4-server:latest
       
     - name: Push Docker Image
       run: |
         docker login -u fahadkamran2001 -p ${{ secrets.DOCKER_PASSWORD }}
         docker push fahadkamran2001/ca4-db:latest
+        docker push fahadkamran2001/ca4-server:latest
