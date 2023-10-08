@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - i200983
+      - i200977
+      - i190600
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check Out Repository
+      uses: actions/checkout@v2
+    - name: Login to Docker
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Build Docker Image
+      run: docker build . --file Dockerfile --tag fahadkamran2001/ca4-db:latest
+      
+    - name: Push Docker Image
+      run: |
+        docker login -u fahadkamran2001 -p ${{ secrets.DOCKER_PASSWORD }}
+        docker push fahadkamran2001/ca4-db:latest
