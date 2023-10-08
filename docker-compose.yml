@@ -4,7 +4,7 @@ services:
     image: fahadkamran2001/ca4-db:latest
     container_name: ca4-db
     ports:
-      - "32000:3306"
+      - "3300:3300"
     environment:
       MYSQL_ROOT_PASSWORD: tiger123
       MYSQL_DATABASE: users
